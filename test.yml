@@ -1,0 +1,21 @@
+config:
+  target: 'https://www.phptravels.org'
+  plugins:
+      expect: {}
+  phases:
+    - duration: 1
+      arrivalRate: 1
+  defaults:
+    headers:
+      content-type: 'application/json;charset=UTF-8'
+      accept: 'application/json;charset=UTF-8'
+  payload:
+    path: "data/test.csv"
+    fields:
+      - "test"
+scenarios:
+  - flow:
+      - post:
+          url: "/index.php?rp=/announcements"
+          expect:
+            - statusCode: 200

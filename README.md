@@ -1,0 +1,3 @@
+- Run `npm install` to get artillery
+- Run `./test.sh` to run the test
+- Run `node_modules/.bin/artillery report reportname` to generate html report. Reports will be in `reports` folder. 
